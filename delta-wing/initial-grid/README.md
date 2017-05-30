@@ -3,7 +3,7 @@
 
 This coarse initial grid contains 143 nodes, 216 triangles, and 434 tetrahedra.
 
-Boundary conditons:
+Boundary conditons (delta01.mapbc):
 1. solid wall top
 2. solid wall bottom
 3. solid wall bevel
