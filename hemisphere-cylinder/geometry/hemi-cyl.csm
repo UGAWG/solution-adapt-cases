@@ -1,0 +1,39 @@
+# https://turbmodels.larc.nasa.gov/Onerawingnumerics_grids/hcf-grid-generator_description_v4.pdf
+# https://turbmodels.larc.nasa.gov/hc3dnumericspart2_grids.html
+# https://turbmodels.larc.nasa.gov/hc3dnumericspart2_val.html
+
+# session03_2up.pdf
+
+despmtr radius   0.5 #
+despmtr x2      10.0 #
+despmtr dist   100.0 #
+
+sphere radius 0 0 radius
+cylinder radius 0 0 x2 0 0 radius
+union
+
+dump hemisphere-cylinder.egads
+
+sphere x2 0 0 dist
+
+dump sphere.egads
+
+import sphere.egads
+import hemisphere-cylinder.egads
+
+subtract
+
+dump extra-domain.egads
+
+# full domain
+#box -dist -dist -dist dist+x2 2*dist 2*dist
+
+#half domain
+box -dist 0 -dist dist+x2 dist 2*dist
+
+intersect
+
+dump hsc01.egads
+dump hsc01.stp
+dump hsc01.igs
+
