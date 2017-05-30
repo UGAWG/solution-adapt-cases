@@ -33,7 +33,7 @@ box -dist 0 -dist dist+x2 dist 2*dist
 
 intersect
 
-dump hsc01.egads
-dump hsc01.stp
-dump hsc01.igs
+dump hemisph-cyl.egads
+dump hemisph-cyl.stp
+dump hemisph-cyl.igs
 
