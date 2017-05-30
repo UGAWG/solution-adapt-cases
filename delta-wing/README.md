@@ -1,4 +1,4 @@
-Delta Wing
+# Delta Wing
 
 This 3D Laminar Delta Wing case was used in the first three
 High-Order Workshops.[1]
@@ -7,6 +7,15 @@ Leicht and Hartmann.[2]
 The geometry is composted of planar surfaces, which makes
 it a good test case for evaluating 3D grid adaptation tools. [3]
 
+# Simulation Conditions
+
+- 0.3 Mach number
+- 12.5 degrees angle of attack
+- 4000 Reynolds number based on root chord
+- 1 grid unit length root chord
+- 0.133974596 grid unit squared refrence area
+
+# References
 
 [1] Wang, Z. J., Fidkowski, K., Abgrall, R., Bassi, F., Caraeni, D., Cary, A., Deconinck, H., Hartmann, R., Hillewaert, K.,
 Huynh, H. T., Kroll, N., May, G., Persson, P.-O., van Leer, B., and Visbal, M., "High-Order CFD Methods: Current Status and Perspective," International Journal for Numerical Methods in Fluids, Vol. 72, No. 8, July 2013, pp. 811-845.
