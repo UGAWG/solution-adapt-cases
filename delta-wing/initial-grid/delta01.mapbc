@@ -1,0 +1,11 @@
+10
+1 4000 solid_wall_top
+2 4000 solid_wall_bottom
+3 4000 solid_wall_bevel
+4 4000 solid_wall_back_face
+5 5050 freestream_x_min
+6 5050 freestream_x_max
+7 6662 symmetry_y_0
+8 5050 freestream_y_max
+9 5050 freestream_z_min
+10 5050 freestream_z_max
