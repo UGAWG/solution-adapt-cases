@@ -10,6 +10,7 @@ It is part of the Solver Technology Discussion Group (STDG) SciTech-2018 special
 - 0.84 Mach number
 - 3.06 (Case 2308) and 6.06 (Case 2565) degrees angle of attack
 - 14.6 million Reynolds number based on root chord
+- reference temperature 540 degrees Rankine
 - 1 grid unit length root chord
 - 0.801672958512342 grid unit length reference mean aerodynamic chord
 - 1.47601797621980 grid unit length reference semispan
