@@ -5,7 +5,7 @@ In this geometry, the trailing edge of the wing has been made sharp
 for the purposes of this particular CFD exercise, as described in [1]
 and [2].
 The domain is constructed from AileM6_with_sharp_TE.stp and primitives with OpenCSM [3]. 
-It is availble in EGADS [4] and STEP formats.
+It is availble in EGADS [4], IGES, and STEP formats.
 
 # References
 

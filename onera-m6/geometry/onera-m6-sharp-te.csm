@@ -24,6 +24,7 @@ box -2*dist 0 -2*dist 4*dist 2*dist 4*dist
 
 intersect
 
+dump onera-m6-sharp-te.igs
 dump onera-m6-sharp-te.ugrid
 dump onera-m6-sharp-te.egads
 dump onera-m6-sharp-te.stp
