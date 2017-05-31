@@ -1,4 +1,4 @@
-# Hemisphere Cylinder
+# ONERA M6 Wing
 
 This is the case described as 
 [3D ONERA M6 Wing Validation Case](https://turbmodels.larc.nasa.gov/onerawingnumerics_val.html).
