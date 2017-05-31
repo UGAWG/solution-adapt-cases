@@ -1,0 +1,33 @@
+# https://turbmodels.larc.nasa.gov/Onerawingnumerics_grids/hcf-grid-generator_description_v4.pdf
+# https://turbmodels.larc.nasa.gov/onerawingnumerics_val.html
+# https://turbmodels.larc.nasa.gov/onerawingnumerics_grids.html
+
+# session03_2up.pdf
+
+despmtr rchord 810.491484086 #
+despmtr dist   100.0 #
+
+sphere 0 0 0 dist
+
+dump sphere.egads
+
+import sphere.egads
+import AileM6_with_sharp_TE.stp
+scale 1.0/rchord
+
+subtract
+
+dump extra-domain.egads
+
+#half domain
+box -2*dist 0 -2*dist 4*dist 2*dist 4*dist
+
+intersect
+
+dump onera-m6-sharp-te.ugrid
+dump onera-m6-sharp-te.egads
+dump onera-m6-sharp-te.stp
+
+# very slow
+# dump onera-m6-sharp-te.igs
+
