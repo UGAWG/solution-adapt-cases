@@ -18,3 +18,4 @@ Discrete grid to geometry map (hsc01.gas)
 
 geometry type: 0, geometry node; 1, geoemtry edge; 2, geometry face;
 
+This coarse initial grid adapted to curvature contains 572 nodes, 770 triangles, and 2078 tetrahedra.
