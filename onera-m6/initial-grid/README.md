@@ -1,5 +1,5 @@
 
-# om5ste01.meshb
+# om6ste01.meshb
 
 This coarse initial grid contains 5474 nodes, 2446 triangles, and 29822 tetrahedra.
 
@@ -25,3 +25,6 @@ Discrete grid to geometry map (om5ste01.gas)
 
 geometry type: 0, geometry node; 1, geoemtry edge; 2, geometry face;
 
+# oneram6.meshb
+
+This coarse initial grid adapted to curvature contains 1080 nodes, 1158 triangles, and 4527 tetrahedra.
