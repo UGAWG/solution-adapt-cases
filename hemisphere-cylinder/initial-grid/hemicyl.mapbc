@@ -1,0 +1,7 @@
+6
+1 3000 solid_wall_hemisphere
+2 5000 riemann_inflow_upper
+3 5000 riemann_inflow_lower
+4 6662 y_symmetry
+5 5051 back_pressure
+6 3000 solid_wall_cylinder
