@@ -8,24 +8,28 @@ despmtr rchord 810.491484086 #
 despmtr dist   100.0 #
 
 sphere 0 0 0 dist
-
-dump sphere.egads
-
-import sphere.egads
 import AileM6_with_sharp_TE.stp
 scale 1.0/rchord
 
+dimension oparams    1  3  0
+set oparams  "0.05; 0.001; 5.0;"
+
+patbeg iface @nface
+    select     face       iface
+    attribute .tParams  oparams
+patend
+
 subtract
 
-dump extra-domain.egads
+end
 
-#half domain
+half domain
 box -2*dist 0 -2*dist 4*dist 2*dist 4*dist
 
 intersect
 
-dump onera-m6-sharp-te.igs
-dump onera-m6-sharp-te.ugrid
+#dump onera-m6-sharp-te.igs
+#dump onera-m6-sharp-te.ugrid
 dump onera-m6-sharp-te.egads
 dump onera-m6-sharp-te.stp
 
