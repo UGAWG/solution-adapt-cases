@@ -1,7 +1,7 @@
 
 # hsc01.meshb
 
-This coarse initial grid contains 3179 nodes, 2502 triangles, and 15449 tetrahedra.
+This coarse initial grid contains 31066 nodes, 6548 triangles, and 170011 tetrahedra.
 
 Boundary conditons (hsc01.mapbc):
 1. farfield riemann inflow
