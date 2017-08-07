@@ -15,3 +15,32 @@ Boundary conditons (hsc01.mapbc):
 Geometry association is available in Edges,
 VerticesOnGeometricVertices, VerticesOnGeometricEdges, and
 VerticesOnGeometricTriangles recoards.
+
+# hemicyl.meshb
+
+- Parsing Vertices : 572 item
+- Parsing Triangles : 770 item
+- Parsing Tetrahedra : 2078 item
+
+Boundary conditons (hemicyl.mapbc):
+1. solid wall hemisphere
+2. farfield riemann inflow
+3. farfield riemann inflow
+4. y symmetry
+5. back pressure p/p_ref=1.0
+6. solid wall cylinder
+
+# hemicyl_curvAdapt.meshb
+
+Curvature adapted matching the faces of the IGES file:
+
+- Parsing Vertices : 586 item
+- Parsing Triangles : 740 item
+- Parsing Tetrahedra : 2213 item
+
+Boundary conditons (hemicyl_curvAdapt.mapbc):
+1. farfield riemann inflow
+2. y symmetry
+3. back pressure p/p_ref=1.0
+4. solid wall cylinder
+5. solid wall hemisphere
