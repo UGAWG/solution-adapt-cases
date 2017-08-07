@@ -5,6 +5,14 @@ This coarse initial grid contains 31066 nodes, 6548 triangles, and
 170011 tetrahedra. It started as an EGADS tessellation and was adapted
 to surface curvature with an isotropic gradation of 1.2.
 
+- Vertices : 31066 item
+- Edges : 211 item
+- Triangles : 6548 item
+- Tetrahedra : 170011 item
+- VerticesOnGeometricVertices : 7 item
+- VerticesOnGeometricEdges : 221 item
+- VerticesOnGeometricTriangles : 3490 item
+
 Boundary conditons (hsc01.mapbc):
 1. farfield riemann inflow
 2. y symmetry
@@ -18,9 +26,9 @@ VerticesOnGeometricTriangles recoards.
 
 # hemicyl.meshb
 
-- Parsing Vertices : 572 item
-- Parsing Triangles : 770 item
-- Parsing Tetrahedra : 2078 item
+- Vertices : 572 item
+- Triangles : 770 item
+- Tetrahedra : 2078 item
 
 Boundary conditons (hemicyl.mapbc):
 1. solid wall hemisphere
@@ -34,9 +42,9 @@ Boundary conditons (hemicyl.mapbc):
 
 Curvature adapted matching the faces of the IGES file:
 
-- Parsing Vertices : 586 item
-- Parsing Triangles : 740 item
-- Parsing Tetrahedra : 2213 item
+- Vertices : 586 item
+- Triangles : 740 item
+- Tetrahedra : 2213 item
 
 Boundary conditons (hemicyl_curvAdapt.mapbc):
 1. farfield riemann inflow
