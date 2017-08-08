@@ -1,9 +1,16 @@
 
 # om6ste01.meshb
 
-This coarse initial grid contains 5474 nodes, 2446 triangles, and 29822 tetrahedra.
+This coarse initial grid:
+Parsing Vertices : 5474 item
+Parsing Edges : 116 item
+Parsing Triangles : 2446 item
+Parsing Tetrahedra : 29822 item
+Parsing VerticesOnGeometricVertices : 14 item
+Parsing VerticesOnGeometricEdges : 139 item
+Parsing VerticesOnGeometricTriangles : 1350 item
 
-Boundary conditons (om5ste01.mapbc):
+Boundary conditons (om6ste01.mapbc):
 1. riemann inflow
 2. y symmetry
 3. solid wall wing lower
@@ -17,14 +24,31 @@ Boundary conditons (om5ste01.mapbc):
 11. solid wall tip aft upper
 12. solid wall tip aft lower
 
-Discrete grid to geometry map (om5ste01.gas)
-- number of geometry edge segments
-- segment node 0, segment node 1, edge id
-- number of parameters
-- geometry type, entity id, global node id, t or u, v
+# onera_curvAdapt.meshb
 
-geometry type: 0, geometry node; 1, geoemtry edge; 2, geometry face;
+This coarse initial grid adapted to curvature with same faces as IGES model:
+Parsing Vertices : 1544 item
+Parsing Triangles : 1670 item
+Parsing Tetrahedra : 6495 item
+
+Boundary conditons (onera_curvAdapt.mapbc):
+1. riemann inflow
+2. y symmetry
+3. solid wall wing lower
+4. solid wall wing upper
+5. solid wall te upper
+6. solid wall te lower
+7. solid wall tip lower
+8. solid wall tip fore lower
+9. solid wall tip fore upper
+10. solid wall tip upper
+11. solid wall tip aft upper
+12. solid wall tip aft lower
 
 # oneram6.meshb
 
-This coarse initial grid adapted to curvature contains 1080 nodes, 1158 triangles, and 4527 tetrahedra.
+This coarse initial grid adapted to curvature with split into 15 faces:
+Parsing Vertices : 1080 item
+Parsing Triangles : 1158 item
+Parsing Tetrahedra : 4527 item
+
