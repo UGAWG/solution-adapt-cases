@@ -2,8 +2,9 @@
 # hsc01.meshb
 
 This coarse initial grid contains 31066 nodes, 6548 triangles, and
-170011 tetrahedra. It started as an EGADS tessellation and was adapted
-to surface curvature with an isotropic gradation of 1.2.
+170011 tetrahedra. It started as an EGADS tessellation of the surface
+and TETGEN was used to fill the volume. It was then adapted to surface
+curvature with an isotropic gradation of 1.2.
 
 - Vertices : 31066 item
 - Edges : 211 item
