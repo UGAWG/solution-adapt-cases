@@ -8,27 +8,17 @@ despmtr radius   0.5 #
 despmtr x2      10.0 #
 despmtr dist   100.0 #
 
+# outer boundary
+sphere x2 0 0 dist
+
+# model
 sphere radius 0 0 radius
 cylinder radius 0 0 x2 0 0 radius
 union
 
-dump hemisphere-cylinder.egads
-
-sphere x2 0 0 dist
-
-dump sphere.egads
-
-import sphere.egads
-import hemisphere-cylinder.egads
-
 subtract
 
-dump extra-domain.egads
-
-# full domain
-#box -dist -dist -dist dist+x2 2*dist 2*dist
-
-#half domain
+# portion to keep
 box -dist 0 -dist dist+x2 dist 2*dist
 
 intersect
@@ -37,3 +27,4 @@ dump hemisph-cyl.egads
 dump hemisph-cyl.stp
 dump hemisph-cyl.igs
 
+end
