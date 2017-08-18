@@ -1,18 +1,17 @@
 
 # hsc01.meshb
 
-This coarse initial grid contains 31066 nodes, 6548 triangles, and
-170011 tetrahedra. It started as an EGADS tessellation of the surface
+This coarse initial grid started as an EGADS tessellation of the surface
 and TETGEN was used to fill the volume. It was then adapted to surface
 curvature with an isotropic gradation of 1.2.
 
-- Vertices : 31066 item
-- Edges : 211 item
-- Triangles : 6548 item
-- Tetrahedra : 170011 item
+- Vertices : 50702 item
+- Edges : 243 item
+- Triangles : 9266 item
+- Tetrahedra : 292019 item
 - VerticesOnGeometricVertices : 7 item
-- VerticesOnGeometricEdges : 221 item
-- VerticesOnGeometricTriangles : 3490 item
+- VerticesOnGeometricEdges : 253 item
+- VerticesOnGeometricTriangles : 4881 item
 
 Boundary conditons (hsc01.mapbc):
 1. farfield riemann inflow
@@ -23,7 +22,7 @@ Boundary conditons (hsc01.mapbc):
 
 Geometry association is available in Edges,
 VerticesOnGeometricVertices, VerticesOnGeometricEdges, and
-VerticesOnGeometricTriangles recoards.
+VerticesOnGeometricTriangles records.
 
 # hemicyl.meshb
 
