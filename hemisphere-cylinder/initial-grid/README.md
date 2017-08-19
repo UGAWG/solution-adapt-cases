@@ -52,3 +52,18 @@ Boundary conditons (hemicyl_curvAdapt.mapbc):
 3. back pressure p/p_ref=1.0
 4. solid wall cylinder
 5. solid wall hemisphere
+
+# hsc-gmsh-26.meshb
+
+GMsh initial file
+
+- Vertices : 4103 item
+- Triangles : 6022 item
+- Tetrahedra : 14435 item
+
+Boundary conditons (hsc-gmsh-26.mapbc):
+1. farfield riemann inflow
+2. y symmetry
+3. back pressure p/p_ref=1.0
+4. solid wall cylinder
+5. solid wall hemisphere
