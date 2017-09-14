@@ -1,0 +1,108 @@
+
+sphere 0 0 0 100
+box -200 0 -200  400 -200 400
+subtract
+
+set nspline 120
+
+set body_length 10.50000
+set width       14.291666-10.645833
+set R_hemi      0.5/body_length
+set xmax_hc5    1.2596192642524968
+set x2          (1.0-R_hemi)
+
+skbeg  0  0  0
+
+  cirarc (0.5+0.5*cos(pi(0.75)))/body_length (0.5*sin(pi(0.75)))/body_length 0.0   0.5/body_length 0.5/body_length 0.0
+
+  linseg    x2 0.5/body_length 0.
+
+  patbeg    i nspline
+
+# Note: suboff-tail function is defined over xx=[0,14.291666].
+#       The tail is defined over xx=[10.645833, 14.291666].
+
+# The rear hemisphere grid is defined over xx=[1-R_hemi, xmax_hc5].
+# We apply the suboff-tail precisely to this part of the grid.
+
+# NOTE: The shape is deformed, and not the same as the original
+#       since we need rmax=0.5 to connect to the HC.
+
+    # Linear point distribution xx=[1-R_hemi, xmax_hc5]
+    #set xx x2+i*(xmax_hc5-x2)/(nspline+1)
+  
+    # Cosine clustered distribution xx=[1-R_hemi, xmax_hc5]
+    set eta 1-(1+cos(pi(1)*i/(nspline+1)))/2
+    set xx x2+eta*(xmax_hc5-x2)
+
+    #s = [0,1] over xx=[1-R_hemi, xmax_hc5]
+    set s (xx-x2)/(xmax_hc5-x2)
+
+    #x = [10.645833, 14.291666]
+    set x 10.645833+width*s
+
+    set rmax 0.5
+
+#------------------------------------------------------------
+# Afterbody
+#
+#                                          <---------->
+#              .   . ..................... .  .
+#         .        .                       .       .         r
+#      .           .                       .           .     ^
+#    .             .                       .             .   |
+#   ......................................................   ------> x
+
+
+    ifthen x le 13.979167
+
+      set xi (13.979167-x)/3.333333
+      set rh 0.1175
+      set k0 10.0
+      set k1 44.6244
+
+      set r rmax*sqrt(rh^2+rh*k0*xi^2+(20.0-20.0*rh^2-4.0*rh*k0-1.0/3.0*k1)*xi^3\
++(-45.0+45.0*rh^2+6.0*rh*k0+k1)*xi^4\
++(36.0-36.0*rh^2-4.0*rh*k0-k1)*xi^5\
++(-10.0+10.0*rh^2+rh*k0+1.0/3.0*k1)*xi^6)
+
+#------------------------------------------------------------
+# Afterbody Cap
+#                                                      <->
+#              .   . ..................... .  .
+#         .        .                       .       .         r
+#      .           .                       .           .     ^
+#    .             .                       .             .   |
+#   ......................................................   ------> x
+
+    else
+
+      set tmp 1.0-(3.2*x-44.733333)^2
+      set r 0.1175*rmax*sqrt(tmp)
+
+    endif
+
+    #scale by the body lenght
+    set r r/body_length
+
+    spline xx r 0
+
+  patend
+
+  # set the very last point
+  spline xmax_hc5 0 0
+
+  #close the sketch
+  linseg 0 0 0
+skend
+
+scale body_length
+rotatex 90 0 0
+revolve 0 0 0  1 0 0  -180
+
+#dump hchf_body.stl
+
+subtract
+
+dump hchf.egads
+
