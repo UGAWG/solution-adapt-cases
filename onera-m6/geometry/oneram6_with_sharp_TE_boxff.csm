@@ -1,0 +1,9 @@
+
+# converts step to egads
+
+import oneram6_with_sharp_TE_boxff.stp 1
+
+dump oneram6_with_sharp_TE_boxff.egads
+
+end
+
